@@ -1,4 +1,4 @@
-import { Box , Typography} from '@mui/material'
+import { Box , Button, Typography} from '@mui/material'
 import React, {useContext} from 'react'
 import BodyPart from './BodyPart'
 import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu'
@@ -11,9 +11,9 @@ const LeftArrow = () => {
     const { scrollPrev } = useContext(VisibilityContext);
   
     return (
-      <Typography onClick={() => scrollPrev()} className="right-arrow">
+      <Button onClick={() => scrollPrev()} className="right-arrow">
         <img src={LeftArrowIcon} alt="right-arrow" />
-      </Typography>
+      </Button>
     );
   };
   
@@ -21,9 +21,9 @@ const LeftArrow = () => {
     const { scrollNext } = useContext(VisibilityContext);
   
     return (
-      <Typography onClick={() => scrollNext()} className="left-arrow">
+      <Button onClick={() => scrollNext()} className="left-arrow">
         <img src={RightArrowIcon} alt="right-arrow" />
-      </Typography>
+      </Button>
     );
   };
 
